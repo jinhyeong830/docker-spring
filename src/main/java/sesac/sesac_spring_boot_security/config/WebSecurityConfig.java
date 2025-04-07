@@ -41,7 +41,7 @@ public class WebSecurityConfig {
           // .formLogin() // 폼 로그인 방식, session 로그인일 때 사용, (토큰인증 방식에서는 사용하지 않음)
           .sessionManagement(sessionManagement -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 // session 기반이 아니므로 무상태(STATELESS) 설정, stateless: 서버가 세션을 생성하거나 보관하지 않음.
-          git .exceptionHandling(exception ->
+          .exceptionHandling(exception ->
                   exception.authenticationEntryPoint((req, res, ex) -> {
                       res.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
                   })
