@@ -43,6 +43,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             docker pull jjinyodocker/backend
-            cd /home/ubuntu/project
+            cd /home/ubuntu/project-docker
             docker-compose down
             docker-compose up -d
