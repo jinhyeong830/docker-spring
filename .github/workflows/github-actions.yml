@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t jjinyodocker/backend ./docker-spring
+          docker build -t jjinyodocker/backend ./
 
       - name: Push to Docker Hub
         uses: docker/login-action@v2
